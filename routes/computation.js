@@ -11,4 +11,5 @@ router.get('/', function (req, res, next) {
     res.write('[Math.expm1()] applied to ' + `${[x]}​​​​​​​​` + ' is ' + `${[Math.expm1(x)]}​​​​​​​​`);
     res.end();
 });
+module.exports = router;
 
