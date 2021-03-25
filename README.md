@@ -1,3 +1,3 @@
 # wa23avula
-added files
+Link to the remote heroku server
 https://wa23avula.herokuapp.com/
