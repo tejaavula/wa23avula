@@ -5,8 +5,8 @@ router.get('/',(req,res)=>{
     let data=req.query.x
     console.log(data)
     res.render('computation',{
-        randomSolution:`Cube root of ${randomNumber} is ${Math.cbrt(randomNumber)}`,
-        querySolution:`Cube root of ${data} is ${Math.cbrt(data)}`
+        randomSolution:`Exponent of ${randomNumber} is ${Math.exp(randomNumber)}`,
+        querySolution:`Exponent of ${data} is ${Math.exp(data)}`
     })
 })
 
