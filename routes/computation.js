@@ -4,11 +4,11 @@ var x ;
 /* GET users listing. */
 router.get('/', function (req, res, next) {
  
-x = Math.random();
+x = Math.floor(Math.random()*100)+1;
 // res.send('hello');
-res.write('[Math.round()] applied to ' + `${ [x]}` + ' is ' + `${[Math.round(x)]}\n`);
+res.write('[Math.atan()] applied to ' + `${ [x]}` + ' is ' + `${[Math.atan(x)]}\n`);
  
-res.write('[Math.fround()] applied to ' + `${ [x]}` + ' is ' + `${[Math.fround(x)]}`);
+res.write('[Math.exp()] applied to ' + `${ [x]}` + ' is ' + `${[Math.exp(x)]}`);
 res.end();
 });
 
