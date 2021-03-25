@@ -1,15 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var x;
-/* GET users listing. */
-router.get('/', function (req, res, next) {
-
-    x = Math.random();
-    // res.send('hello');
-    res.write('[Math.exp()] applied to ' + `${[x]}​​​​​​​​` + ' is ' + `${[Math.exp(x)]}​​​​​​​​\n`);
-
-    res.write('[Math.expm1()] applied to ' + `${[x]}​​​​​​​​` + ' is ' + `${[Math.expm1(x)]}​​​​​​​​`);
-    res.end();
-});
+router.get('/',(req,res)=>{
+    let randomNumber=Math.floor(Math.random()*100)+1
+    let data=req.query.x
+    console.log(data)
+    res.render('computation',{
+        randomSolution:`Cube root of ${randomNumber} is ${Math.cbrt(randomNumber)}`,
+        querySolution:`Cube root of ${data} is ${Math.cbrt(data)}`
+    })
+})
 
 module.exports=router
